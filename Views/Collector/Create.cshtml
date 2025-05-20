@@ -1,7 +1,7 @@
-﻿@model KutipWeb.Models.Pickup
+﻿@model KutipWeb.Models.Collector
 
 @{
-    ViewData["Title"] = "Create Pickup";
+    ViewData["Title"] = "Create Collector";
 }
 
 <div class="pagetitle">
@@ -9,7 +9,7 @@
     <nav>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
-            <li class="breadcrumb-item"><a asp-controller="Pickup" asp-action="Index">Pickups</a></li>
+            <li class="breadcrumb-item"><a asp-controller="Collector" asp-action="Index">Collectors</a></li>
             <li class="breadcrumb-item active">Create</li>
         </ol>
     </nav>
@@ -20,74 +20,40 @@
         <div class="col-lg-8">
             <div class="card">
                 <div class="card-body pt-4">
-                    <h5 class="card-title">New Pickup</h5>
+                    <h5 class="card-title">New Collector</h5>
 
                     <form asp-action="Create" method="post">
                         <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
 
                         <div class="row mb-3">
-                            <label asp-for="BinId" class="col-sm-3 col-form-label text-end"></label>
+                            <label asp-for="Name" class="col-sm-3 col-form-label text-end"></label>
                             <div class="col-sm-9">
-                                <select asp-for="BinId" class="form-select" asp-items="ViewBag.Bins">
-                                    <option value="">-- Select Bin --</option>
-                                </select>
-                                <span asp-validation-for="BinId" class="text-danger small"></span>
+                                <input asp-for="Name" class="form-control" placeholder="Enter full name" />
+                                <span asp-validation-for="Name" class="text-danger small"></span>
                             </div>
                         </div>
 
                         <div class="row mb-3">
-                            <label asp-for="CollectorId" class="col-sm-3 col-form-label text-end"></label>
+                            <label asp-for="PhoneNumber" class="col-sm-3 col-form-label text-end"></label>
                             <div class="col-sm-9">
-                                <select asp-for="CollectorId" class="form-select" asp-items="ViewBag.Collectors">
-                                    <option value="">-- Select Collector --</option>
-                                </select>
-                                <span asp-validation-for="CollectorId" class="text-danger small"></span>
+                                <input asp-for="PhoneNumber" class="form-control" placeholder="Enter phone number" />
+                                <span asp-validation-for="PhoneNumber" class="text-danger small"></span>
                             </div>
                         </div>
 
                         <div class="row mb-3">
-                            <label asp-for="PickupTime" class="col-sm-3 col-form-label text-end"></label>
+                            <label asp-for="VehiclePlate" class="col-sm-3 col-form-label text-end"></label>
                             <div class="col-sm-9">
-                                <input asp-for="PickupTime" class="form-control" readonly />
-                                <small class="text-muted">Pickup time is set automatically.</small>
-                                <span asp-validation-for="PickupTime" class="text-danger small"></span>
+                                <input asp-for="VehiclePlate" class="form-control" placeholder="e.g. WXYZ 1234" />
+                                <span asp-validation-for="VehiclePlate" class="text-danger small"></span>
                             </div>
                         </div>
 
                         <div class="row mb-3">
-                            <label asp-for="status" class="col-sm-3 col-form-label text-end"></label>
+                            <label asp-for="CompanyName" class="col-sm-3 col-form-label text-end"></label>
                             <div class="col-sm-9">
-                                <select asp-for="status" class="form-select">
-                                    <option value="">-- Select Status --</option>
-                                    <option value="Pending">Pending</option>
-                                    <option value="Completed">Completed</option>
-                                    <option value="Cancelled">Cancelled</option>
-                                </select>
-                                <span asp-validation-for="status" class="text-danger small"></span>
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label asp-for="BeforePhotoUrl" class="col-sm-3 col-form-label text-end"></label>
-                            <div class="col-sm-9">
-                                <input asp-for="BeforePhotoUrl" class="form-control" placeholder="URL of Before Photo" />
-                                <span asp-validation-for="BeforePhotoUrl" class="text-danger small"></span>
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label asp-for="DuringPhotoUrl" class="col-sm-3 col-form-label text-end"></label>
-                            <div class="col-sm-9">
-                                <input asp-for="DuringPhotoUrl" class="form-control" placeholder="URL of During Photo" />
-                                <span asp-validation-for="DuringPhotoUrl" class="text-danger small"></span>
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label asp-for="AfterPhotoUrl" class="col-sm-3 col-form-label text-end"></label>
-                            <div class="col-sm-9">
-                                <input asp-for="AfterPhotoUrl" class="form-control" placeholder="URL of After Photo" />
-                                <span asp-validation-for="AfterPhotoUrl" class="text-danger small"></span>
+                                <input asp-for="CompanyName" class="form-control" placeholder="Enter company name" />
+                                <span asp-validation-for="CompanyName" class="text-danger small"></span>
                             </div>
                         </div>
 
@@ -101,7 +67,6 @@
                                 </a>
                             </div>
                         </div>
-
                     </form>
                 </div>
             </div>

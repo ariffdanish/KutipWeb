@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KutipWeb")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2ff3b471f4d600c91eab8e08bcd3368b7ca39ac0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d16a1a25b0e87c58293a16f682418a8f1cae91d2")]
 [assembly: System.Reflection.AssemblyProductAttribute("KutipWeb")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KutipWeb")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

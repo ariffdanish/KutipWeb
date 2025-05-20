@@ -1,0 +1,79 @@
+﻿@model IEnumerable<KutipWeb.Models.Pickup>
+
+@{
+    ViewData["Title"] = "Pickups";
+}
+
+<div class="pagetitle">
+    <h1>@ViewData["Title"]</h1>
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
+            <li class="breadcrumb-item active">Pickups</li>
+        </ol>
+    </nav>
+</div>
+
+<section class="section">
+    <div class="card">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <a asp-action="Create" class="btn btn-primary btn-sm">
+                <i class="bi bi-plus-circle me-1"></i> Add Pickup
+            </a>
+        </div>
+        <div class="card-body pt-4">
+            <div class="table-responsive">
+                <table class="table datatable">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Bin Plate</th>
+                            <th>Collector</th>
+                            <th>Pickup Time</th>
+                            <th>Status</th>
+                            <th>Photo</th>
+                            <th class="text-end">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.Bin?.PlateID</td>
+                                <td>@item.Collector?.CompanyName</td>
+                                <td>@item.PickupTime.ToString("g")</td>
+                                <td>@item.status</td>
+                                <td>
+                                    @if (!string.IsNullOrEmpty(item.PhotoUrl))
+                                    {
+                                        <a href="@item.PhotoUrl" target="_blank">View</a>
+                                    }
+                                    else
+                                    {
+                                        <span class="text-muted">No Photo</span>
+                                    }
+                                </td>
+                                <td class="text-end">
+                                    <a asp-action="Details" asp-route-id="@item.PickupId" class="btn btn-outline-info btn-sm me-1">
+                                        <i class="bi bi-info-circle"></i>
+                                    </a>
+                                    <a asp-action="Edit" asp-route-id="@item.PickupId" class="btn btn-outline-warning btn-sm me-1">
+                                        <i class="bi bi-pencil-square"></i>
+                                    </a>
+                                    <a asp-action="Delete" asp-route-id="@item.PickupId" class="btn btn-outline-danger btn-sm">
+                                        <i class="bi bi-trash"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                        @if (!Model.Any())
+                        {
+                            <tr>
+                                <td colspan="6" class="text-center text-muted">No pickups found.</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>

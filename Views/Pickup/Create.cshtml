@@ -1,0 +1,101 @@
+﻿@model KutipWeb.Models.Pickup
+
+@{
+    ViewData["Title"] = "Create Pickup";
+}
+
+<div class="pagetitle">
+    <h1>@ViewData["Title"]</h1>
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
+            <li class="breadcrumb-item"><a asp-controller="Pickup" asp-action="Index">Pickups</a></li>
+            <li class="breadcrumb-item active">Create</li>
+        </ol>
+    </nav>
+</div>
+
+<section class="section">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card">
+                <div class="card-body pt-4">
+                    <h5 class="card-title">New Pickup</h5>
+
+                    <form asp-action="Create" enctype="multipart/form-data" method="post">
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+
+                        <div class="row mb-3">
+                            <label asp-for="BinId" class="col-sm-3 col-form-label text-end"></label>
+                            <div class="col-sm-9">
+                                <select asp-for="BinId" class="form-select" asp-items="ViewBag.Bins">
+                                    <option value="">-- Select Bin --</option>
+                                </select>
+                                <span asp-validation-for="BinId" class="text-danger small"></span>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label asp-for="CollectorId" class="col-sm-3 col-form-label text-end"></label>
+                            <div class="col-sm-9">
+                                <select asp-for="CollectorId" class="form-select" asp-items="ViewBag.Collectors">
+                                    <option value="">-- Select Collector --</option>
+                                </select>
+                                <span asp-validation-for="CollectorId" class="text-danger small"></span>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label asp-for="status" class="col-sm-3 col-form-label text-end"></label>
+                            <div class="col-sm-9">
+                                <select asp-for="status" class="form-select">
+                                    <option value="">-- Select Status --</option>
+                                    @foreach (var statusValue in Enum.GetValues(typeof(KutipWeb.Models.Pickup.Status)))
+                                    {
+                                        <option value="@statusValue">@statusValue</option>
+                                    }
+                                </select>
+                                <span asp-validation-for="status" class="text-danger small"></span>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label asp-for="Photo" class="col-sm-3 col-form-label text-end"></label>
+                            <div class="col-sm-9">
+                                <input asp-for="Photo" type="file" class="form-control" accept="image/*" onchange="previewPhoto(this);" />
+                                <span asp-validation-for="Photo" class="text-danger small"></span>
+                                <img id="PreviewPhoto" src="~/assets/img/favicon.png" class="img-thumbnail mt-2" width="150" height="125" />
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-9 offset-sm-3 d-flex justify-content-between">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="bi bi-plus-circle me-1"></i> Create
+                                </button>
+                                <a asp-action="Index" class="btn btn-outline-secondary">
+                                    <i class="bi bi-arrow-left me-1"></i> Back to List
+                                </a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}
+
+<script>
+    function previewPhoto(input) {
+        const preview = document.getElementById('PreviewPhoto');
+        if (input.files && input.files[0]) {
+            preview.src = URL.createObjectURL(input.files[0]);
+        } else {
+            preview.src = "~/assets/img/favicon.png";
+        }
+    }
+</script>

@@ -17,12 +17,12 @@ namespace KutipWeb.Controllers
             _webHost = webHost;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var pickups = _context.Pickups
+            var pickups = await _context.Pickups
                 .Include(p => p.Collector)
-                .Include(p => p.Bin)  // Include Bin navigation
-                .ToList();
+                .Include(p => p.Bin)
+                .ToListAsync();
 
             return View(pickups);
         }
@@ -36,7 +36,7 @@ namespace KutipWeb.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(Pickup pickup)
+        public async Task<IActionResult> Create(Pickup pickup)
         {
             if (ModelState.IsValid)
             {
@@ -46,7 +46,7 @@ namespace KutipWeb.Controllers
                 pickup.PhotoUrl = uniqueFileName;
 
                 _context.Pickups.Add(pickup);
-                _context.SaveChanges();
+                await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
 
@@ -54,29 +54,12 @@ namespace KutipWeb.Controllers
             return View(pickup);
         }
 
-        private string GetUploadedFileName(Pickup pickup)
+        public async Task<IActionResult> Details(int id)
         {
-            string uniqueFileName = null;
-
-            if (pickup.Photo != null)
-            {
-                string uploadsFolder = Path.Combine(_webHost.WebRootPath, "images");
-                uniqueFileName = Guid.NewGuid().ToString() + "_" + pickup.Photo.FileName;
-                string filePath = Path.Combine(uploadsFolder, uniqueFileName);
-                using (var fileStream = new FileStream(filePath, FileMode.Create))
-                {
-                    pickup.Photo.CopyTo(fileStream);
-                }
-            }
-            return uniqueFileName;
-        }
-
-        public IActionResult Details(int id)
-        {
-            var pickup = _context.Pickups
+            var pickup = await _context.Pickups
                 .Include(p => p.Collector)
                 .Include(p => p.Bin)
-                .FirstOrDefault(p => p.PickupId == id);
+                .FirstOrDefaultAsync(p => p.PickupId == id);
 
             if (pickup == null)
                 return NotFound();
@@ -85,9 +68,9 @@ namespace KutipWeb.Controllers
         }
 
         [HttpGet]
-        public IActionResult Edit(int id)
+        public async Task<IActionResult> Edit(int id)
         {
-            var pickup = _context.Pickups.Find(id);
+            var pickup = await _context.Pickups.FindAsync(id);
             if (pickup == null)
                 return NotFound();
 
@@ -97,42 +80,52 @@ namespace KutipWeb.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(Pickup pickup)
+        public async Task<IActionResult> Edit(Pickup pickup)
         {
             if (ModelState.IsValid)
             {
-                var existingPickup = _context.Pickups.AsNoTracking().FirstOrDefault(p => p.PickupId == pickup.PickupId);
+                var existingPickup = await _context.Pickups.AsNoTracking().FirstOrDefaultAsync(p => p.PickupId == pickup.PickupId);
                 if (existingPickup == null)
                     return NotFound();
 
-                // Preserve original PickupTime if you want
+                // Preserve original PickupTime
                 pickup.PickupTime = existingPickup.PickupTime;
 
-                
-                // Handle photo update
+                // Handle photo upload
                 if (pickup.Photo != null)
                 {
+                    // Delete old file
+                    string uploadsFolder = Path.Combine(_webHost.WebRootPath, "images");
+                    string oldFilePath = Path.Combine(uploadsFolder, existingPickup.PhotoUrl);
+                    if (System.IO.File.Exists(oldFilePath))
+                    {
+                        System.IO.File.Delete(oldFilePath);
+                    }
+
                     string uniqueFileName = GetUploadedFileName(pickup);
-                    existingPickup.PhotoUrl = uniqueFileName;
+                    pickup.PhotoUrl = uniqueFileName;
+                }
+                else
+                {
+                    pickup.PhotoUrl = existingPickup.PhotoUrl; // Keep old photo if new not uploaded
                 }
 
                 _context.Update(pickup);
-                _context.SaveChanges();
+                await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-
 
             PopulateCollectorsAndBins(pickup.CollectorId, pickup.BinId);
             return View(pickup);
         }
 
         [HttpGet]
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            var pickup = _context.Pickups
+            var pickup = await _context.Pickups
                 .Include(p => p.Collector)
                 .Include(p => p.Bin)
-                .FirstOrDefault(p => p.PickupId == id);
+                .FirstOrDefaultAsync(p => p.PickupId == id);
 
             if (pickup == null)
                 return NotFound();
@@ -142,23 +135,49 @@ namespace KutipWeb.Controllers
 
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public IActionResult DeleteConfirmed(int id)
+        public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var pickup = _context.Pickups.Find(id);
+            var pickup = await _context.Pickups.FindAsync(id);
             if (pickup == null)
                 return NotFound();
 
+            // Optionally delete photo file
+            if (!string.IsNullOrEmpty(pickup.PhotoUrl))
+            {
+                string uploadsFolder = Path.Combine(_webHost.WebRootPath, "images");
+                string filePath = Path.Combine(uploadsFolder, pickup.PhotoUrl);
+                if (System.IO.File.Exists(filePath))
+                {
+                    System.IO.File.Delete(filePath);
+                }
+            }
+
             _context.Pickups.Remove(pickup);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
+        }
+
+        private string GetUploadedFileName(Pickup pickup)
+        {
+            if (pickup.Photo != null)
+            {
+                string uploadsFolder = Path.Combine(_webHost.WebRootPath, "images");
+                string uniqueFileName = Guid.NewGuid().ToString() + "_" + Path.GetFileName(pickup.Photo.FileName);
+                string filePath = Path.Combine(uploadsFolder, uniqueFileName);
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    pickup.Photo.CopyTo(fileStream);
+                }
+                return uniqueFileName;
+            }
+
+            return "";
         }
 
         private void PopulateCollectorsAndBins(int? selectedCollectorId = null, int? selectedBinId = null)
         {
-            ViewData["Collectors"] = new SelectList(_context.Collectors, "CollectorId", "Name", selectedCollectorId);
-            ViewData["Bins"] = new SelectList(_context.Bins, "BinId", "PlateID", selectedBinId);
+            ViewBag.Collectors = new SelectList(_context.Collectors, "CollectorId", "Name", selectedCollectorId);
+            ViewBag.Bins = new SelectList(_context.Bins, "BinId", "PlateID", selectedBinId);
         }
-
-        
     }
 }
