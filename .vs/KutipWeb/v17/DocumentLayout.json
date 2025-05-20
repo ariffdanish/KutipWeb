@@ -3,60 +3,34 @@
   "WorkspaceRootPath": "C:\\Users\\User\\OneDrive\\Desktop\\KutipWeb\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B7B6E184-08D5-4A41-AC80-58B04699A335}|KutipWeb.csproj|c:\\users\\user\\onedrive\\desktop\\kutipweb\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B7B6E184-08D5-4A41-AC80-58B04699A335}|KutipWeb.csproj|solutionrelative:views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7B6E184-08D5-4A41-AC80-58B04699A335}|KutipWeb.csproj|c:\\users\\user\\onedrive\\desktop\\kutipweb\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B7B6E184-08D5-4A41-AC80-58B04699A335}|KutipWeb.csproj|solutionrelative:views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7B6E184-08D5-4A41-AC80-58B04699A335}|KutipWeb.csproj|c:\\users\\user\\onedrive\\desktop\\kutipweb\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B7B6E184-08D5-4A41-AC80-58B04699A335}|KutipWeb.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7B6E184-08D5-4A41-AC80-58B04699A335}|KutipWeb.csproj|c:\\users\\user\\onedrive\\desktop\\kutipweb\\views\\pickup\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B7B6E184-08D5-4A41-AC80-58B04699A335}|KutipWeb.csproj|solutionrelative:views\\pickup\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7B6E184-08D5-4A41-AC80-58B04699A335}|KutipWeb.csproj|c:\\users\\user\\onedrive\\desktop\\kutipweb\\views\\bin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B7B6E184-08D5-4A41-AC80-58B04699A335}|KutipWeb.csproj|solutionrelative:views\\bin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7B6E184-08D5-4A41-AC80-58B04699A335}|KutipWeb.csproj|c:\\users\\user\\onedrive\\desktop\\kutipweb\\views\\bin\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B7B6E184-08D5-4A41-AC80-58B04699A335}|KutipWeb.csproj|solutionrelative:views\\bin\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7B6E184-08D5-4A41-AC80-58B04699A335}|KutipWeb.csproj|c:\\users\\user\\onedrive\\desktop\\kutipweb\\views\\bin\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B7B6E184-08D5-4A41-AC80-58B04699A335}|KutipWeb.csproj|solutionrelative:views\\bin\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7B6E184-08D5-4A41-AC80-58B04699A335}|KutipWeb.csproj|c:\\users\\user\\onedrive\\desktop\\kutipweb\\models\\pickup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B7B6E184-08D5-4A41-AC80-58B04699A335}|KutipWeb.csproj|solutionrelative:models\\pickup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B7B6E184-08D5-4A41-AC80-58B04699A335}|KutipWeb.csproj|c:\\users\\user\\onedrive\\desktop\\kutipweb\\models\\bin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B7B6E184-08D5-4A41-AC80-58B04699A335}|KutipWeb.csproj|solutionrelative:models\\bin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7B6E184-08D5-4A41-AC80-58B04699A335}|KutipWeb.csproj|c:\\users\\user\\onedrive\\desktop\\kutipweb\\controllers\\bincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B7B6E184-08D5-4A41-AC80-58B04699A335}|KutipWeb.csproj|solutionrelative:controllers\\bincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7B6E184-08D5-4A41-AC80-58B04699A335}|KutipWeb.csproj|c:\\users\\user\\onedrive\\desktop\\kutipweb\\views\\collector\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B7B6E184-08D5-4A41-AC80-58B04699A335}|KutipWeb.csproj|solutionrelative:views\\collector\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B7B6E184-08D5-4A41-AC80-58B04699A335}|KutipWeb.csproj|c:\\users\\user\\onedrive\\desktop\\kutipweb\\controllers\\pickupcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B7B6E184-08D5-4A41-AC80-58B04699A335}|KutipWeb.csproj|solutionrelative:controllers\\pickupcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B7B6E184-08D5-4A41-AC80-58B04699A335}|KutipWeb.csproj|c:\\users\\user\\onedrive\\desktop\\kutipweb\\views\\collector\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B7B6E184-08D5-4A41-AC80-58B04699A335}|KutipWeb.csproj|solutionrelative:views\\collector\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\source\\repos\\ResumeManager\\Controllers\\ResumeController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B7B6E184-08D5-4A41-AC80-58B04699A335}|KutipWeb.csproj|c:\\users\\user\\onedrive\\desktop\\kutipweb\\views\\pickup\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B7B6E184-08D5-4A41-AC80-58B04699A335}|KutipWeb.csproj|solutionrelative:views\\pickup\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{B7B6E184-08D5-4A41-AC80-58B04699A335}|KutipWeb.csproj|c:\\users\\user\\onedrive\\desktop\\kutipweb\\models\\schedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7B6E184-08D5-4A41-AC80-58B04699A335}|KutipWeb.csproj|solutionrelative:models\\schedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7B6E184-08D5-4A41-AC80-58B04699A335}|KutipWeb.csproj|c:\\users\\user\\onedrive\\desktop\\kutipweb\\models\\route.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7B6E184-08D5-4A41-AC80-58B04699A335}|KutipWeb.csproj|solutionrelative:models\\route.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7B6E184-08D5-4A41-AC80-58B04699A335}|KutipWeb.csproj|c:\\users\\user\\onedrive\\desktop\\kutipweb\\models\\pickup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7B6E184-08D5-4A41-AC80-58B04699A335}|KutipWeb.csproj|solutionrelative:models\\pickup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7B6E184-08D5-4A41-AC80-58B04699A335}|KutipWeb.csproj|c:\\users\\user\\onedrive\\desktop\\kutipweb\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7B6E184-08D5-4A41-AC80-58B04699A335}|KutipWeb.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\source\\repos\\ResumeManager\\Models\\Applicant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,186 +40,111 @@
       "DocumentGroups": [
         {
           "DockedWidth": 299,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Error.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\KutipWeb\\Views\\Shared\\Error.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\Error.cshtml",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\KutipWeb\\Views\\Shared\\Error.cshtml",
-              "RelativeToolTip": "Views\\Shared\\Error.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-20T13:22:44.148Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "_ValidationScriptsPartial.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\KutipWeb\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\KutipWeb\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-20T13:22:42.048Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\KutipWeb\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\KutipWeb\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAKIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-20T13:21:52.507Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\KutipWeb\\Views\\Pickup\\Create.cshtml",
-              "RelativeDocumentMoniker": "Views\\Pickup\\Create.cshtml",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\KutipWeb\\Views\\Pickup\\Create.cshtml",
-              "RelativeToolTip": "Views\\Pickup\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-20T13:21:41.093Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\KutipWeb\\Views\\Bin\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Bin\\Index.cshtml",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\KutipWeb\\Views\\Bin\\Index.cshtml",
-              "RelativeToolTip": "Views\\Bin\\Index.cshtml",
-              "ViewState": "AgIAADYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-20T13:21:35.336Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\KutipWeb\\Views\\Bin\\Delete.cshtml",
-              "RelativeDocumentMoniker": "Views\\Bin\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\KutipWeb\\Views\\Bin\\Delete.cshtml",
-              "RelativeToolTip": "Views\\Bin\\Delete.cshtml",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-20T13:21:31.668Z",
+              "Title": "Schedule.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\KutipWeb\\Models\\Schedule.cs",
+              "RelativeDocumentMoniker": "Models\\Schedule.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\KutipWeb\\Models\\Schedule.cs",
+              "RelativeToolTip": "Models\\Schedule.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T15:46:24.016Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\KutipWeb\\Views\\Bin\\Create.cshtml",
-              "RelativeDocumentMoniker": "Views\\Bin\\Create.cshtml",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\KutipWeb\\Views\\Bin\\Create.cshtml",
-              "RelativeToolTip": "Views\\Bin\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-20T13:21:17.038Z",
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\KutipWeb\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\KutipWeb\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T15:45:40.714Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 4,
+              "Title": "Route.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\KutipWeb\\Models\\Route.cs",
+              "RelativeDocumentMoniker": "Models\\Route.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\KutipWeb\\Models\\Route.cs",
+              "RelativeToolTip": "Models\\Route.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T15:45:34.611Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Bin.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\KutipWeb\\Models\\Bin.cs",
               "RelativeDocumentMoniker": "Models\\Bin.cs",
               "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\KutipWeb\\Models\\Bin.cs",
               "RelativeToolTip": "Models\\Bin.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwB4AAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T13:20:23.839Z",
+              "WhenOpened": "2025-05-20T15:42:52.085Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "BinController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\KutipWeb\\Controllers\\BinController.cs",
-              "RelativeDocumentMoniker": "Controllers\\BinController.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\KutipWeb\\Controllers\\BinController.cs",
-              "RelativeToolTip": "Controllers\\BinController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "ResumeController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ResumeManager\\Controllers\\ResumeController.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\source\\repos\\ResumeManager\\Controllers\\ResumeController.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ResumeManager\\Controllers\\ResumeController.cs",
+              "RelativeToolTip": "..\\..\\..\\source\\repos\\ResumeManager\\Controllers\\ResumeController.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T13:19:59.897Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\KutipWeb\\Views\\Collector\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Collector\\Index.cshtml",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\KutipWeb\\Views\\Collector\\Index.cshtml",
-              "RelativeToolTip": "Views\\Collector\\Index.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-19T17:45:03.11Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\KutipWeb\\Views\\Pickup\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Pickup\\Index.cshtml",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\KutipWeb\\Views\\Pickup\\Index.cshtml",
-              "RelativeToolTip": "Views\\Pickup\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-19T17:38:07.086Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\KutipWeb\\Views\\Collector\\Create.cshtml",
-              "RelativeDocumentMoniker": "Views\\Collector\\Create.cshtml",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\KutipWeb\\Views\\Collector\\Create.cshtml",
-              "RelativeToolTip": "Views\\Collector\\Create.cshtml",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAAAHIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-19T17:42:31.953Z",
+              "WhenOpened": "2025-05-20T15:28:51.634Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "Applicant.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ResumeManager\\Models\\Applicant.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\source\\repos\\ResumeManager\\Models\\Applicant.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ResumeManager\\Models\\Applicant.cs",
+              "RelativeToolTip": "..\\..\\..\\source\\repos\\ResumeManager\\Models\\Applicant.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACkAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T15:27:55.406Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Pickup.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\KutipWeb\\Models\\Pickup.cs",
               "RelativeDocumentMoniker": "Models\\Pickup.cs",
               "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\KutipWeb\\Models\\Pickup.cs",
               "RelativeToolTip": "Models\\Pickup.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAgwB0AAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T17:15:12.479Z",
+              "WhenOpened": "2025-05-20T15:27:09.951Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 1,
               "Title": "PickupController.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\KutipWeb\\Controllers\\PickupController.cs",
               "RelativeDocumentMoniker": "Controllers\\PickupController.cs",
               "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\KutipWeb\\Controllers\\PickupController.cs",
               "RelativeToolTip": "Controllers\\PickupController.cs",
-              "ViewState": "AgIAAHQAAAAAAAAAAAAuwIEAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAkwHEAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T16:52:59.464Z"
+              "WhenOpened": "2025-05-20T15:27:08.791Z",
+              "EditorCaption": ""
             }
           ]
         }

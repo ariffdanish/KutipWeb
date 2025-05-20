@@ -7,7 +7,7 @@
         public int AssignedCollectorId { get; set; }
         public Collector AssignedCollector { get; set; } = new Collector();
         public Day Day { get; set; }
-        public TimeOnly TimePickup { get; set; }
+        public TimeOnly TimePickup { get; set; } = new TimeOnly();
     }
 
     public enum Day

@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace KutipWeb.Models
 {
@@ -23,10 +24,12 @@ namespace KutipWeb.Models
         [Display(Name = "Pickup Status")]
         public Status status { get; set; }
 
-        [Display(Name = "Before Photo")]
-        public string BeforePhotoUrl { get; set; } = string.Empty;
-        public string DuringPhotoUrl { get; set; } = string.Empty;
-        public string AfterPhotoUrl { get; set; } = string.Empty;
+        [Display(Name = "Photo")]
+        public string PhotoUrl { get; set; } = "";
+        [Required(ErrorMessage = "Upload Photo")]
+        [Display(Name = "Upload Photo")]
+        [NotMapped]
+        public IFormFile Photo { get; set; } = null!;
 
         public enum Status
         {

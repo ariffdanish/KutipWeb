@@ -9,10 +9,12 @@ namespace KutipWeb.Controllers
     public class PickupController : Controller
     {
         private readonly KutipDbContext _context;
+        private readonly IWebHostEnvironment _webHost;
 
-        public PickupController(KutipDbContext context)
+        public PickupController(KutipDbContext context, IWebHostEnvironment webHost)
         {
             _context = context;
+            _webHost = webHost;
         }
 
         public IActionResult Index()
@@ -40,6 +42,9 @@ namespace KutipWeb.Controllers
             {
                 pickup.PickupTime = DateTimeOffset.Now;
 
+                string uniqueFileName = GetUploadedFileName(pickup);
+                pickup.PhotoUrl = uniqueFileName;
+
                 _context.Pickups.Add(pickup);
                 _context.SaveChanges();
                 return RedirectToAction(nameof(Index));
@@ -47,6 +52,23 @@ namespace KutipWeb.Controllers
 
             PopulateCollectorsAndBins(pickup.CollectorId, pickup.BinId);
             return View(pickup);
+        }
+
+        private string GetUploadedFileName(Pickup pickup)
+        {
+            string uniqueFileName = null;
+
+            if (pickup.Photo != null)
+            {
+                string uploadsFolder = Path.Combine(_webHost.WebRootPath, "images");
+                uniqueFileName = Guid.NewGuid().ToString() + "_" + pickup.Photo.FileName;
+                string filePath = Path.Combine(uploadsFolder, uniqueFileName);
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    pickup.Photo.CopyTo(fileStream);
+                }
+            }
+            return uniqueFileName;
         }
 
         public IActionResult Details(int id)
@@ -86,10 +108,19 @@ namespace KutipWeb.Controllers
                 // Preserve original PickupTime if you want
                 pickup.PickupTime = existingPickup.PickupTime;
 
+                
+                // Handle photo update
+                if (pickup.Photo != null)
+                {
+                    string uniqueFileName = GetUploadedFileName(pickup);
+                    existingPickup.PhotoUrl = uniqueFileName;
+                }
+
                 _context.Update(pickup);
                 _context.SaveChanges();
                 return RedirectToAction(nameof(Index));
             }
+
 
             PopulateCollectorsAndBins(pickup.CollectorId, pickup.BinId);
             return View(pickup);
@@ -127,5 +158,7 @@ namespace KutipWeb.Controllers
             ViewData["Collectors"] = new SelectList(_context.Collectors, "CollectorId", "Name", selectedCollectorId);
             ViewData["Bins"] = new SelectList(_context.Bins, "BinId", "PlateID", selectedBinId);
         }
+
+        
     }
 }

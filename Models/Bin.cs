@@ -24,11 +24,11 @@ namespace KutipWeb.Models
 
         [DataType(DataType.DateTime)]
         [Display(Name = "Created")]
-        public DateTimeOffset CreatedAt { get; set; }
+        public DateTime CreatedAt { get; set; } = DateTime.Now;
 
         [DataType(DataType.DateTime)]
         [Display(Name = "Updated")]
-        public DateTimeOffset UpdatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; } = DateTime.Now;
 
         public virtual List<Collector> Collectors { get; set; } = new List<Collector>();
     }
