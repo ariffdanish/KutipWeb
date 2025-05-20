@@ -1,0 +1,53 @@
+﻿@model KutipWeb.Models.Collector
+
+@{
+    ViewData["Title"] = "Delete Collector";
+}
+
+<div class="pagetitle">
+    <h1>@ViewData["Title"]</h1>
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
+            <li class="breadcrumb-item"><a asp-action="Index">Collectors</a></li>
+            <li class="breadcrumb-item active">Delete</li>
+        </ol>
+    </nav>
+</div>
+
+<section class="section">
+    <div class="card border-danger">
+        <div class="card-header bg-danger text-white">
+            <h5 class="mb-0"><i class="bi bi-exclamation-triangle me-2"></i> Confirm Delete</h5>
+        </div>
+        <div class="card-body">
+            <p class="mb-4 text-danger fw-bold">Are you sure you want to delete the following collector?</p>
+
+            <dl class="row">
+                <dt class="col-sm-3">Name</dt>
+                <dd class="col-sm-9">@Model.Name</dd>
+
+                <dt class="col-sm-3">Phone Number</dt>
+                <dd class="col-sm-9">@Model.PhoneNumber</dd>
+
+                <dt class="col-sm-3">Vehicle Plate</dt>
+                <dd class="col-sm-9">@Model.VehiclePlate</dd>
+
+                <dt class="col-sm-3">Company Name</dt>
+                <dd class="col-sm-9">@Model.CompanyName</dd>
+            </dl>
+
+            <form asp-action="Delete">
+                <input type="hidden" asp-for="CollectorId" />
+                <div class="d-flex justify-content-between mt-4">
+                    <button type="submit" class="btn btn-danger">
+                        <i class="bi bi-trash me-1"></i> Confirm Delete
+                    </button>
+                    <a asp-action="Index" class="btn btn-outline-secondary">
+                        <i class="bi bi-arrow-left me-1"></i> Cancel
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

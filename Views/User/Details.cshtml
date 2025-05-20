@@ -1,0 +1,57 @@
+﻿@model KutipWeb.Models.User
+
+@{
+    ViewData["Title"] = "User Details";
+}
+
+<div class="pagetitle">
+    <h1>@ViewData["Title"]</h1>
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
+            <li class="breadcrumb-item"><a asp-controller="User" asp-action="Index">User Management</a></li>
+            <li class="breadcrumb-item active">Details</li>
+        </ol>
+    </nav>
+</div><!-- End Page Title -->
+
+<section class="section">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0"><i class="bi bi-person-lines-fill me-1"></i> User Details</h5>
+                </div>
+                <div class="card-body pt-4">
+                    <dl class="row">
+                        <dt class="col-sm-3">Username</dt>
+                        <dd class="col-sm-9">@Html.DisplayFor(model => model.Username)</dd>
+
+                        <dt class="col-sm-3">Full Name</dt>
+                        <dd class="col-sm-9">@Html.DisplayFor(model => model.Name)</dd>
+
+                        <dt class="col-sm-3">Email</dt>
+                        <dd class="col-sm-9">@Html.DisplayFor(model => model.Email)</dd>
+
+                        <dt class="col-sm-3">Role</dt>
+                        <dd class="col-sm-9">@Html.DisplayFor(model => model.Role)</dd>
+
+                        <dt class="col-sm-3">Created At</dt>
+                        <dd class="col-sm-9">@Html.DisplayFor(model => model.CreatedAt)</dd>
+                    </dl>
+
+                    <div class="d-flex justify-content-between mt-4">
+                        <a asp-action="Edit" asp-route-id="@Model?.UserId" class="btn btn-warning">
+                            <i class="bi bi-pencil-square me-1"></i> Edit
+                        </a>
+                        <a asp-action="Index" class="btn btn-outline-secondary">
+                            <i class="bi bi-arrow-left me-1"></i> Back
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

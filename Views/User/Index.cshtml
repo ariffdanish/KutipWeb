@@ -1,0 +1,57 @@
+﻿@model IEnumerable<KutipWeb.Models.User>
+
+@{
+    ViewData["Title"] = "User Management";
+}
+
+<div class="card">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        
+        <a asp-action="Create" class="btn btn-sm btn-primary">
+            <i class="bi bi-plus-circle"></i> Create New
+        </a>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table datatable">
+                <thead class="table-light">
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.First().Username)</th>
+                        <th>@Html.DisplayNameFor(model => model.First().Name)</th>
+                        <th>@Html.DisplayNameFor(model => model.First().Email)</th>
+                        <th>@Html.DisplayNameFor(model => model.First().Role)</th>
+                        <th>@Html.DisplayNameFor(model => model.First().CreatedAt)</th>
+                        <th class="text-end">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Username</td>
+                            <td>@item.Name</td>
+                            <td>@item.Email</td>
+                            <td>
+                                <span class="badge bg-@(item.Role == KutipWeb.Models.Role.Admin ? "danger" : "secondary")">
+                                    @item.Role
+                                </span>
+                            </td>
+                            <td>@item.CreatedAt.ToString("yyyy-MM-dd")</td>
+                            <td class="text-end">
+                                <a asp-action="Details" asp-route-id="@item.UserId" class="btn btn-outline-info btn-sm me-1">
+                                    <i class="bi bi-eye"></i>
+                                </a>
+                                <a asp-action="Edit" asp-route-id="@item.UserId" class="btn btn-outline-warning btn-sm me-1">
+                                    <i class="bi bi-pencil-square"></i>
+                                </a>
+                                <a asp-action="Delete" asp-route-id="@item.UserId" class="btn btn-outline-danger btn-sm">
+                                    <i class="bi bi-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,84 @@
+﻿@model KutipWeb.Models.User
+
+@{
+    ViewData["Title"] = "Edit User";
+}
+
+<div class="pagetitle">
+    <h1>@ViewData["Title"]</h1>
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
+            <li class="breadcrumb-item"><a asp-controller="User" asp-action="Index">User Management</a></li>
+            <li class="breadcrumb-item active">Edit</li>
+        </ol>
+    </nav>
+</div><!-- End Page Title -->
+
+<section class="section">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0"><i class="bi bi-pencil-square me-1"></i> Edit User</h5>
+                </div>
+                <div class="card-body pt-4">
+                    <form asp-action="Edit" class="row g-3">
+                        <input type="hidden" asp-for="UserId" />
+
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger col-12"></div>
+
+                        <div class="row mb-3">
+                            <label asp-for="Username" class="col-sm-3 col-form-label text-end"></label>
+                            <div class="col-sm-9">
+                                <input asp-for="Username" class="form-control" />
+                                <span asp-validation-for="Username" class="text-danger small"></span>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label asp-for="Name" class="col-sm-3 col-form-label text-end"></label>
+                            <div class="col-sm-9">
+                                <input asp-for="Name" class="form-control" />
+                                <span asp-validation-for="Name" class="text-danger small"></span>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label asp-for="Email" class="col-sm-3 col-form-label text-end"></label>
+                            <div class="col-sm-9">
+                                <input asp-for="Email" type="email" class="form-control" />
+                                <span asp-validation-for="Email" class="text-danger small"></span>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label asp-for="Role" class="col-sm-3 col-form-label text-end"></label>
+                            <div class="col-sm-9">
+                                <select asp-for="Role" class="form-select" asp-items="Html.GetEnumSelectList<KutipWeb.Models.Role>()">
+                                    <option value="">-- Select Role --</option>
+                                </select>
+                                <span asp-validation-for="Role" class="text-danger small"></span>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="offset-sm-3 col-sm-9 d-flex justify-content-between">
+                                <button type="submit" class="btn btn-success">
+                                    <i class="bi bi-save me-1"></i> Save
+                                </button>
+                                <a asp-action="Index" class="btn btn-outline-secondary">
+                                    <i class="bi bi-arrow-left me-1"></i> Back
+                                </a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}
